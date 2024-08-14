@@ -1,8 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ProductList from "../components/product/list";
+import { getProduct } from '../services/get-product';
+
+const list = await getProduct();
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Product list with cart | Frontend Mentor">
 	<main class="bg-rose-100 h-full w-full">
+    <ProductList items={list} client:load />
 	</main>
 </Layout>
