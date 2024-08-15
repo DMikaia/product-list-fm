@@ -16,7 +16,11 @@ export default function Product({ item }: Props) {
   return (
     <section className="w-full h-fit flex flex-col gap-6">
       <div className="w-full relative h-full">
-        <ul className="w-full h-full z-10 aspect-4/3 bg-muted rounded-lg">
+        <ul
+          className={`${
+            found && "border-2 border-red"
+          } w-full h-full z-10 aspect-4/3 bg-muted rounded-lg`}
+        >
           {Object.keys(item.image).map((screen) => (
             <ProductImage
               key={screen}
