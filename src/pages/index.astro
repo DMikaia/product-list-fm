@@ -3,11 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import MainLayout from '../layouts/MainLayout.astro';
 import ProductLayout from '../components/product';
 import Cart from "../components/cart";
-import { getProduct } from '../services/get-product';
-
-// Fetching the product list from the api
-const server = new URL(Astro.url);
-const items = await getProduct(server);
+import items from "../data/products.json";
 ---
 
 <Layout title="Product list with cart | Frontend Mentor">
