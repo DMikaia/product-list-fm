@@ -10,7 +10,7 @@ interface Props {
 
 export default function ProductList({ items, loaded }: Props) {
   return (
-    <ul className="grid gap-4 grid-cols-1 laptop:grid-cols-3 h-full">
+    <ul className="grid gap-4 grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 h-full">
       {!loaded ? (
         <Fragment>
           {Array(6)
