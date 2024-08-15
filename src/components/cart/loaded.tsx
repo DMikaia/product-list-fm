@@ -1,6 +1,7 @@
-import type { CartItem } from "@/types/cart";
+import type { CartItem } from "../../types/cart";
 import Item from "./item";
 import { sumTotal } from "../../stores/cart";
+import ConfirmModal from "../modal/modal";
 
 interface Props {
   items: CartItem[];
@@ -10,8 +11,8 @@ export default function LoadedCart({ items }: Props) {
   return (
     <div className="w-full h-fit flex flex-col justify-center items-center gap-4">
       <ul className="w-full h-fit flex flex-col gap-4">
-        {items.map((item) => (
-          <Item cartItem={item} />
+        {items.map((item, key) => (
+          <Item key={key} cartItem={item} />
         ))}
       </ul>
 
@@ -35,9 +36,7 @@ export default function LoadedCart({ items }: Props) {
         </p>
       </div>
 
-      <button className="py-2 w-full h-fit rounded-full bg-red text-rose-50 ease-in-out duration-200 hover:opacity-90">
-        Confirm order
-      </button>
+      <ConfirmModal cartItems={items} />
     </div>
   );
 }

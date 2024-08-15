@@ -1,4 +1,4 @@
-import type { Item } from "@/types/item";
+import type { Item } from "../../types/item";
 import { addItemToCart } from "../../stores/cart";
 
 interface Props {

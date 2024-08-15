@@ -1,7 +1,7 @@
 import { useStore } from "@nanostores/react";
 import type { Item } from "../../types/item";
 import CTAButton from "./button";
-import ProductImage from "./image";
+import ProductImage from "./ProductImage";
 import { cartStore } from "../../stores/cart";
 import StateButton from "./state-button";
 
@@ -21,8 +21,8 @@ export default function Product({ item }: Props) {
             <ProductImage
               key={screen}
               screen={screen}
-              src={item.image[screen]}
-              alt={item.name}
+              url={item.image[screen]}
+              description={item.name}
             />
           ))}
         </ul>

@@ -39,12 +39,12 @@ export const decrementItem = (id: string) => {
   cartStore.set(updatedItems);
 };
 
-export const removeItem = (id: string) => {
+export const countItems = () => {
   const items = cartStore.get();
 
-  const updatedItems = items.filter((cartItem) => cartItem.item.id !== id);
+  const totals = items.reduce((acc, curr) => acc + curr.quantity, 0);
 
-  cartStore.set(updatedItems);
+  return totals;
 };
 
 export const sumTotal = () => {
@@ -56,4 +56,16 @@ export const sumTotal = () => {
   );
 
   return totals;
+};
+
+export const removeItem = (id: string) => {
+  const items = cartStore.get();
+
+  const updatedItems = items.filter((cartItem) => cartItem.item.id !== id);
+
+  cartStore.set(updatedItems);
+};
+
+export const resetStore = () => {
+  cartStore.set([]);
 };
