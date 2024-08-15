@@ -15,7 +15,7 @@ export default function ProductImage({ src, alt, screen }: Props) {
 
   return (
     <img
-      className={`rounded-lg aspect-auto ${className.style}`}
+      className={`rounded-lg h-full w-full object-cover object-center aspect-auto ${className.style}`}
       src={src}
       alt={alt}
     />
