@@ -2,14 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import MainLayout from '../layouts/MainLayout.astro';
 import ProductLayout from '../components/product';
-import Cart from "../components/cart";
+import Cart from '../components/cart';
 ---
 
 <Layout title="Product list with cart | Frontend Mentor">
 	<main class="h-fit w-full overflow-y-auto overflow-x-hidden">
     <MainLayout>
       <ProductLayout client:visible />
-      <Cart client:visible />
+      <Cart client:visible/>
     </MainLayout>
 	</main>
 </Layout>
