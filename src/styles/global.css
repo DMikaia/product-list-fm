@@ -22,6 +22,9 @@
   --red-hat-text-bold: RedHatText-Bold, sans-serif;
   --red-hat-text-semibold: RedHatText-SemiBold, sans-serif;
 
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
   --red: 14, 86%, 42%;
   --green: 159, 69%, 38%;
 
@@ -31,4 +34,8 @@
   --rose-400: 7, 20%, 60%;
   --rose-500: 12, 20%, 44%;
   --rose-900: 14, 65%, 9%;
+}
+
+.h-loading {
+  height: calc(100% - 56px);
 }
