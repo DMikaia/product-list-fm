@@ -1,13 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ProductList from "../components/product/list";
+import MainLayout from '../layouts/MainLayout.astro';
+import ProductLayout from '../components/product';
+import Cart from "../components/cart";
 import { getProduct } from '../services/get-product';
 
-const list = await getProduct();
+
+// Fetching the product list from the api
+const items = await getProduct();
 ---
 
 <Layout title="Product list with cart | Frontend Mentor">
-	<main class="bg-rose-100 h-full w-full">
-    <ProductList items={list} client:load />
+	<main class="bg-rose-100 h-fit w-full overflow-y-auto overflow-x-hidden">
+    <MainLayout>
+      <ProductLayout items={items} />
+      <Cart />
+    </MainLayout>
 	</main>
 </Layout>
