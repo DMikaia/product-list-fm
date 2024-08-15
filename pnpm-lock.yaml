@@ -59,6 +59,9 @@ dependencies:
   tailwindcss:
     specifier: ^3.4.10
     version: 3.4.10
+  tslib:
+    specifier: ^2.6.3
+    version: 2.6.3
   typescript:
     specifier: ^5.5.4
     version: 5.5.4
