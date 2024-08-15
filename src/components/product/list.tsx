@@ -1,4 +1,3 @@
-import { getProduct } from "../../services/get-product";
 import type { Item } from "../../types/item";
 import Product from "./item";
 

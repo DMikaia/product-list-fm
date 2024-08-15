@@ -1,4 +1,3 @@
-import { Image } from "astro:assets";
 import { imageClass } from "../../helpers/image";
 
 interface Props {
@@ -15,7 +14,7 @@ export default function ProductImage({ src, alt, screen }: Props) {
   }
 
   return (
-    <Image
+    <img
       className={`rounded-lg aspect-auto ${className.style}`}
       src={src}
       alt={alt}

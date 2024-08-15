@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const getProduct = async () => {
   try {
-    const serverUrl = "http://localhost:4321";
+    const serverUrl = import.meta.env.PUBLIC_API_URL;
 
     const response = await axios.get<ApiResponse<Item[]>, ApiResponse<Item[]>>(
       `${serverUrl}/api/index.json`,
