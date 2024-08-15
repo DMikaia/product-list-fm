@@ -8,7 +8,7 @@ interface Props {
 
 export default function ProductList({ items }: Props) {
   return (
-    <ul>
+    <ul className="grid gap-4 grid-cols-1 laptop:grid-cols-3 h-full">
       {items.map((item) => (
         <Product key={item.id} item={item} />
       ))}

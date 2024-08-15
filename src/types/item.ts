@@ -1,10 +1,7 @@
 export type Item = {
   id: string;
   image: {
-    thumbnail: string;
-    mobile: string;
-    tablet: string;
-    desktop: string;
+    [key: string]: string;
   };
   name: string;
   category: string;
