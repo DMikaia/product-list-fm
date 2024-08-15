@@ -1,5 +1,5 @@
-import type { CartItem } from "@/types/cart";
-import type { Item } from "@/types/item";
+import type { CartItem } from "../types/cart";
+import type { Item } from "../types/item";
 import { atom } from "nanostores";
 
 export const cartStore = atom<CartItem[]>([]);
