@@ -5,9 +5,9 @@ import ProductLayout from '../components/product';
 import Cart from "../components/cart";
 import { getProduct } from '../services/get-product';
 
-
 // Fetching the product list from the api
-const items = await getProduct();
+const server = new URL(Astro.url);
+const items = await getProduct(server);
 ---
 
 <Layout title="Product list with cart | Frontend Mentor">
